@@ -11,4 +11,4 @@ def print_full_name(first_name, last_name, country):
     print("I am {} {}. I love to teach.".format(
         first_name, last_name))
 
-print_full_name("Asabeneh", "Yetayeh",'Finland')
+print_full_name("Trafalgar", "Law", "Finland")
