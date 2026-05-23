@@ -1,4 +1,4 @@
-#Ud=sing datetime module
+#Using datetime module
 
 from datetime import datetime
 
