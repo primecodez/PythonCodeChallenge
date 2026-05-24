@@ -1,0 +1,3 @@
+Learned file handling
+Understood json.loads()
+Need practice with seek()

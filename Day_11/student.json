@@ -1,4 +1,5 @@
 {
     "name": "Aman",
-    "marks": 95
+    "completed_topics": 5,
+    "current_topic": "File Handling"
 }
