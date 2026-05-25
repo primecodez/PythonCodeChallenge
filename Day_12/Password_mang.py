@@ -4,7 +4,7 @@ import json
 
 # Loading existing data safely
 try:
-    with open("passwords.json", "r") as file:
+    with open("Day_12/passwords.json", "r") as file:
         passwords = json.load(file)
 except FileNotFoundError:
     passwords = {}   # if file doesn't exist yet
@@ -16,7 +16,7 @@ def new_password():
 
     passwords[site] = password
 
-    with open("passwords.json", "w") as file:
+    with open("Day_12/passwords.json", "w") as file:
         json.dump(passwords, file, indent=4)
 
     print("Password saved successfully!")
@@ -38,7 +38,7 @@ while True:
     choice = input("Enter choice: ")
 
     if choice == "1":
-        add_password()
+        new_password()
 
     elif choice == "2":
         view_passwords()

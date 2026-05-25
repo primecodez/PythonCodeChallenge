@@ -1,6 +1,6 @@
 import json
-data = '{"city": "Ahmedabad", "state": "Gujarat"}'
+data = '{"City": "Ahmedabad", "State": "Gujarat"}'
 
 result = json.loads(data)
 print(result)
-print(result["city"])
+print(result["City"])
