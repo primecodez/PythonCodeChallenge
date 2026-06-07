@@ -19,9 +19,13 @@ folders = {
 }
 
 def calculate_size(item):
+       """Recursively calculates total size of files in a folder."""
 
     if isinstance(item,int):
         return item
+
+    if not isinstance(item,int):
+        raise TypeError("Invalid file size")
 
     total = 0
 
@@ -30,4 +34,8 @@ def calculate_size(item):
 
     return total
 
-print(f"Total size : {calculate_size(folders)} MB")
+print(f"Movies -> {calculate_size(folders['Movies'])}")
+print(f"Minecraft -> {calculate_size(folders['Games']['Minecraft'])}")
+print(f"Valorant -> {calculate_size(folders['Games']['Valorant'])}")
+print(f"Games -> {calculate_size(folders['Games'])}")
+print(f"Total size -> {calculate_size(folders)} MB")
