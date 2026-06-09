@@ -19,12 +19,12 @@ folders = {
 }
 
 def calculate_size(item):
-       """Recursively calculates total size of files in a folder."""
+    """Recursively calculates total size of files in a folder."""
 
-    if isinstance(item,int):
+    if isinstance(item, int):
         return item
 
-    if not isinstance(item,int):
+    if not isinstance(item, dict):
         raise TypeError("Invalid file size")
 
     total = 0

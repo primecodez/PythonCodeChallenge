@@ -1,26 +1,38 @@
 import json
 
 try:
-    with open("contact.json", "r") as file:
+    with open(r"Day_16/contact.json", "r") as file:
         contact = json.load(file)
 
 except FileNotFoundError:
     contact = {}
 
-except Exception as e:
-    print("Error:", e)
-    contact = {}
-
 while True:
-    name = input("Name: ")
-    number = int(input("Number: "))
+    print("\n1. Add Contact")
+    print("2. View Contacts")
+    print("3. Exit")
 
-    contact[name] = number
+    choice = input("Choose: ")
 
-    with open("contact.json", "w") as file:
-        json.dump(contact, file, indent=4)
+    if choice == "1":
+        name = input("Name: ")
+        number = input("Number: ")
 
-    choice = input("Add another contact? (y/n): ")
+        contact[name] = number
 
-    if choice.lower() != "y":
+        with open(r"Day_16/contact.json", "w") as file:
+            json.dump(contact, file, indent=4)
+
+        print("Contact saved!")
+
+    elif choice == "2":
+        if not contact:
+            print("No contacts found.")
+        else:
+            print("\nContact List:")
+            for name, number in contact.items():
+                print(f"{name}: {number}")
+
+    elif choice == "3":
+        print("Successfully Exited")
         break
