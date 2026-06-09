@@ -1,4 +1,4 @@
-#Modify the program so it  prints:
+#Modifying the program so it prints:
 
 """Movies -> 2700 MB
 Minecraft -> 500 MB
