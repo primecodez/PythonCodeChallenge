@@ -1,0 +1,101 @@
+Progressive Python Challenge Roadmap
+
+Each challenge builds skills that recruiters often look for.
+
+
+#1
+Expense Tracker CLI
+
+Difficulty: Beginner → Intermediate
+
+Build a command-line app that lets users add expenses, categories, and dates, stores data in CSV or JSON, shows monthly summaries, and exports reports.
+
+Skills: file handling, functions, classes, datetime, error handling.
+
+
+
+#2
+
+URL Shortener API
+
+Difficulty: Intermediate
+
+Use Flask or FastAPI to create endpoints that shorten URLs, store mappings in SQLite, and redirect users.
+
+Skills: REST APIs, SQLite, web frameworks, deployment basics.
+
+
+
+#3
+
+Job Application Tracker
+
+Difficulty: Intermediate
+
+Create a tool that tracks companies, positions, application dates, statuses, and follow-up reminders. Add a simple web interface if you can.
+
+Skills: CRUD operations, SQLite, data modeling, basic UI.
+
+
+
+
+#4
+
+Web Scraper + Data Dashboard
+
+Difficulty: Intermediate
+
+Scrape product prices, news headlines, or public datasets using BeautifulSoup. Store the data and visualize trends with Pandas and Matplotlib.
+
+Skills: web scraping, data analysis, visualization, scheduling tasks.
+
+
+
+
+#5
+
+Real-Time Weather App
+
+Difficulty: Intermediate
+
+Consume a public weather API, cache results locally, display forecasts in a CLI or web UI, and handle network errors gracefully.
+
+Skills: API consumption, JSON handling, async requests (optional).
+
+
+
+#6
+
+Automated File Organizer
+
+Difficulty: Intermediate
+
+Watch a folder and automatically organize files by type, date, or size. Add logging and configuration files.
+
+Skills: OS operations, pathlib, logging, automation.
+
+
+
+
+#7
+
+Multiplayer Tic-Tac-Toe Server
+
+Difficulty: Intermediate → Advanced
+
+Create a server that allows two players to connect over the network and play Tic-Tac-Toe.
+
+Skills: sockets, concurrency, state management, testing.
+
+
+
+
+#8
+
+Mini Recommendation System
+
+Difficulty: Advanced
+
+Use a dataset (movies, books, or songs) and recommend similar items based on ratings or content similarity.
+
+Skills: Pandas, NumPy, basic machine learning concepts.
