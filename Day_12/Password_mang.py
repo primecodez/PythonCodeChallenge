@@ -39,15 +39,22 @@ def update_password():
     site = input("Enter site name:")
     if site in passwords:
         password = getpass("Enter new password:")
+        passwords[site] = password
         with open(FILE,"w") as file:
-            json.load(passwords,file, indent=4)
+            json.dump(passwords,file, indent=4)
         print("Password Updated sucessfully.")
 
     else:
         print("Site not found!")
 
-
-
+def search_password():
+    site = input("Enter site name:")
+    if site in passwords:
+        print(f"Password of {site} is {passwords[site]}")
+    
+    else:
+        print("Site not found!")
+        
 def delete_passwords():
     site = input("Enter site name:")
     if site in passwords:
