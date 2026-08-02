@@ -1,22 +1,28 @@
 #Simple Passoword Manager
 
 import json
+import os 
+from getpass import getpass
+
+os.makedirs("Day_12", exist_ok=True)
 
 # Loading existing data safely
+
+FILE = "Day_12/passwords.json"
 try:
-    with open("Day_12/passwords.json", "r") as file:
+    with open(FILE, "r") as file:
         passwords = json.load(file)
 except FileNotFoundError:
     passwords = {}   # if file doesn't exist yet
 
 
-def new_password():
+def add_password():
     site = input("Enter site name: ")
-    password = input("Enter password:")
+    password = getpass("Enter password:")
 
     passwords[site] = password
 
-    with open("Day_12/passwords.json", "w") as file:
+    with open(FILE, "w") as file:
         json.dump(passwords, file, indent=4)
 
     print("Password saved successfully!")
@@ -38,7 +44,7 @@ while True:
     choice = input("Enter choice: ")
 
     if choice == "1":
-        new_password()
+        add_password()
 
     elif choice == "2":
         view_passwords()
