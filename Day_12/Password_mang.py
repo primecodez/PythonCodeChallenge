@@ -35,6 +35,19 @@ def view_passwords():
     for site, password in passwords.items():
         print(f"{site} -> {password}")
 
+def update_password():
+    site = input("Enter site name:")
+    if site in passwords:
+        password = getpass("Enter new password:")
+        with open(FILE,"w") as file:
+            json.load(passwords,file, indent=4)
+        print("Password Updated sucessfully.")
+
+    else:
+        print("Site not found!")
+
+
+
 def delete_passwords():
     site = input("Enter site name:")
     if site in passwords:
@@ -63,6 +76,8 @@ while True:
         view_passwords()
     elif choice == "3":
         delete_passwords()
+    elif choice == "4":
+        update_password()
     elif choice == "6":
         print("Exiting...")
         break
