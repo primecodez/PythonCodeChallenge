@@ -85,6 +85,8 @@ while True:
         delete_passwords()
     elif choice == "4":
         update_password()
+    elif choice == "5":
+        search_password()
     elif choice == "6":
         print("Exiting...")
         break
