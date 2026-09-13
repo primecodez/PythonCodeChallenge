@@ -1,4 +1,7 @@
 import json
+import base64
+import hmac
+import hashlib
 
 header ={
     "alg":"HS256",
@@ -16,7 +19,6 @@ payload_json=json.dumps(payload)
 print(header_json)
 print(payload_json)
 
-import base64
 
 encoded_header = base64.urlsafe_b64encode(
     header_json.encode()
@@ -30,9 +32,6 @@ print(encoded_header)
 print(encoded_payload)
 
 secret = "my-super-secret-key"
-
-import hmac
-import hashlib
 
 message = encoded_header + "." + encoded_payload
 
