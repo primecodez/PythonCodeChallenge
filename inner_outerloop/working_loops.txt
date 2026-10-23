@@ -1,0 +1,7 @@
+## WORKING OF LOOPS 
+
+loops consist of mostly 2 section :
+    -The outer loop which handles the number of rows 
+    -The inner loop which handles the number of columns
+
+    the end ="" leaves no space and end =" " leaves one space
