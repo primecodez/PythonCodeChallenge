@@ -1,5 +1,4 @@
-
-        #case 1
+# global function and its uses        #case 1
 
 x = "awesome"
 #TELL THE OUTPUT
