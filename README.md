@@ -73,6 +73,12 @@ This makes it easier to track progress and revisit concepts in the future.
 
 ---
 
+## THINGS CURRENTLY WORKING ON
+
+-SOLVING CONCEPTS RELATED TO BACKEND
+-USING THE EXISTING KNOWLEDGE OF PYTHON FUNDAMENTALS TO SOLVE PROBLEMS
+-DESIGN BETTER APPROACH TOWARDS PROBLEMS
+
 ## Learning Goals
 
 Through this repository, I aim to:
