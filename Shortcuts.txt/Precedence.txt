@@ -1,0 +1,16 @@
+Python's operator precedence is combining the 
+classic math acronym PEMDASC with the logic acronym NAO.
+
+Parentheses (): Always evaluated first.
+
+Exponents **: Evaluated second.
+
+Multiplication * & Division /, //, %: Evaluated left-to-right.
+
+Addition + & Subtraction -: Evaluated left-to-right.
+
+Comparisons ==, >, <: Evaluated after all math is complete.
+
+N.A.O. (Not, And, Or): Boolean logic evaluates exactly in this order.
+
+Assignment =: Always evaluates absolutely last, moving right-to-left.
