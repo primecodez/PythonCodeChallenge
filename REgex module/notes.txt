@@ -1,0 +1,14 @@
+SymbolNameWhat it doesExample PatternMatches^Starts withChecks if the string begins with the pattern.^Hello"Hello there"$Ends withChecks if the string ends with the pattern.world$"Hello world".Any characterMatches literally any single character (except a new line).h.t"hat", "hot", "hit"*Zero or moreMatches if the preceding character appears zero or multiple times.ab*c"ac", "abc", "abbbc"+One or moreMatches if the preceding character appears at least once.ab+c"abc", "abbbc" (but not "ac")?Zero or oneMatches if the preceding character is optional.colou?r"color", "colour"[]Character setMatches any single character listed inside the brackets.[a-z]Any lowercase letter|Either / OrActs like an OR operator.car|bike"car", "bike"()GroupingGroups characters together to apply rules to the whole block.(ab)+"ab", "abab", "ababab"
+
+Special Sequences (\)
+You will also see a lot of letters paired with a backslash. These are shortcuts for common character types:
+
+\d : Matches any digit (0-9).
+
+\D : Matches any NON-digit.
+
+\w : Matches any word character (letters, numbers, underscores).
+
+\W : Matches any NON-word character (like punctuation).
+
+\s : Matches any whitespace (space, tab, newline).
