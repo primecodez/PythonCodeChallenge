@@ -21,10 +21,13 @@ def get_day_of_week(date_string: str):
             break  # If it works, stop the loop immediately
         except ValueError:
             continue  # If it fails, just move on to the next format in the list
-            
-    # If the loop finishes and date_obj is still None, none of the formats worked
+
+    # If no format worked, raise a proper 400 Bad Request error
     if date_obj is None:
-        return {"error": "Invalid format. Try YYYY-MM-DD or DD Month YYYY"}
-        
+        raise HTTPException(
+            status_code=400, 
+            detail="Invalid format. Try YYYY-MM-DD, DD Month YYYY, or DD Mon YYYY"
+        )
+            
     day_name = date_obj.strftime("%A")
     return {"date": date_string, "day_of_week": day_name}  
