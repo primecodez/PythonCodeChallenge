@@ -1,7 +1,7 @@
 #API TO KNOW THE EXACT DAY FOR A PARTICULAR DATE IN A PARTICULAR YEAR
 #uvicorn APIknowTheDay:app --reload
 
-from fastapi import FastAPI
+from fastapi import FastAPI,HTTPException
 from datetime import datetime
 
 app = FastAPI()
@@ -12,7 +12,6 @@ def get_day_of_week(date_string: str):
     supported_formats = ["%Y-%m-%d", "%d %B %Y", "%d %b %Y"]
     
     date_obj = None
-    
     # Loop through the formats and try each one
     for fmt in supported_formats:
         try:
