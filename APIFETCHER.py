@@ -1,3 +1,4 @@
+#python APIFETCHER.py
 import os
 from dotenv import load_dotenv
 from google import genai
@@ -16,10 +17,9 @@ text_to_embed = "Python is great for backend engineering."
 
 # 5. Call the Gemini embedding model
 response = client.models.embed_content(
-    model='text-embedding-004',
+    model='gemini-embedding-2',
     contents=text_to_embed,
 )
-
 # 6. Extract the vector array from the response
 vector_array = response.embeddings[0].values
 
