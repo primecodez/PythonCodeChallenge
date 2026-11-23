@@ -21,3 +21,14 @@ def track_expense(expense:Expense):
 def expense_record():
     return{"Total item":len(expenses),"expenses":expenses}
 
+@app.get("/total")
+def get_total():
+    total = sum(e.amount for e in expenses)
+    return {"total_spent": total}
+
+    """same working as 
+total = 0
+for e in expenses:
+    total += e.amount
+    
+"""
